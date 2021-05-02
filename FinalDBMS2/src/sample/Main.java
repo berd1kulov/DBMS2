@@ -660,7 +660,7 @@ public class Main extends Application {
                 }
             }
             // Another query to generate new order numbers
-            bookNamesList = FXCollections.observableArrayList(bookNames);
+//            bookNamesList = FXCollections.observableArrayList(bookNames);
             String orderNumQuery = "{? = call order_num()}";
             CallableStatement searchNum
                     = connection.prepareCall(orderNumQuery);
@@ -1242,13 +1242,88 @@ public class Main extends Application {
     //Filter By Name
     private void FilterByName(MenuItem byName){
         byName.setOnAction((ActionEvent event) ->{
-            bookNamesList.sort(Comparator.comparing(String::toString));
+            bookNames.removeAll(bookNames);
+            bookPrices.removeAll(bookPrices);
+            links.removeAll(links);
+            bookAuthor.removeAll(bookAuthor);
+            sqlISBN.removeAll(sqlISBN);
+            imag.removeAll(imag);
+
+
+            try {
+                String sortQry = "{? = call sort_by_name()}";
+                CallableStatement sortStatement
+                        = connection.prepareCall(sortQry);
+                sortStatement.registerOutParameter(1, oracle.jdbc.OracleTypes.CURSOR);
+                sortStatement.execute();
+                ResultSet rst_sort = (ResultSet) sortStatement.getObject(1);
+                int i=0;
+
+                while (rst_sort.next()) {
+                    bookNamesList = FXCollections.observableArrayList(bookNames);
+                    if(rst_sort.getObject(1)!=null && rst_sort.getObject(2)!=null && rst_sort.getObject(3)!=null && rst_sort.getObject(4)!=null && rst_sort.getObject(5)!=null) {
+                        bookNames.add(rst_sort.getObject(1).toString());
+                        // System.out.println(bookNames.get(i++));
+                        bookPrices.add(Double.parseDouble(rst_sort.getObject(2).toString()));
+                        links.add(rst_sort.getObject(3).toString());
+                        bookAuthor.add(rst_sort.getObject(4).toString());
+                        sqlISBN.add(rst_sort.getObject(5).toString());
+                    }
+//                    years.add(rst.getObject(7).toString());
+                    if (rst_sort.getObject(6) != null) {
+                        imag.add(((Blob) rst_sort.getObject(6)).getBinaryStream());
+                        //System.out.println(imag.get(0));
+                    }
+
+
+                }
+                FillImageList();
+                listView.setItems(bookNamesList);
+
+            }catch (Exception e){
+                System.out.println(e);
+            }
         });
     }
     //Filter By Years
     private void FilterByYears(MenuItem byYears){
         byYears.setOnAction((ActionEvent event) ->{
+            bookNames.removeAll(bookNames);
+            bookPrices.removeAll(bookPrices);
+            links.removeAll(links);
+            bookAuthor.removeAll(bookAuthor);
+            sqlISBN.removeAll(sqlISBN);
+            imag.removeAll(imag);
 
+            try {
+                String sortQry = "{? = call sort_by_year()}";
+                CallableStatement sortStatement
+                        = connection.prepareCall(sortQry);
+                sortStatement.registerOutParameter(1, oracle.jdbc.OracleTypes.CURSOR);
+                sortStatement.execute();
+                ResultSet rst_sort = (ResultSet) sortStatement.getObject(1);
+                int i=0;
+
+                while (rst_sort.next()) {
+                    bookNamesList = FXCollections.observableArrayList(bookNames);
+                    if(rst_sort.getObject(1)!=null && rst_sort.getObject(2)!=null && rst_sort.getObject(3)!=null && rst_sort.getObject(4)!=null && rst_sort.getObject(5)!=null) {
+                        bookNames.add(rst_sort.getObject(1).toString());
+                        // System.out.println(bookNames.get(i++));
+                        bookPrices.add(Double.parseDouble(rst_sort.getObject(2).toString()));
+                        links.add(rst_sort.getObject(3).toString());
+                        bookAuthor.add(rst_sort.getObject(4).toString());
+                        sqlISBN.add(rst_sort.getObject(5).toString());
+                    }
+                    if (rst_sort.getObject(6) != null) {
+                        imag.add(((Blob) rst_sort.getObject(6)).getBinaryStream());
+                        //System.out.println(imag.get(0));
+                    }
+
+                }listView.setItems(bookNamesList);
+
+            }catch (Exception e){
+                System.out.println(e);
+            }
         });
     }
     //Login Admin

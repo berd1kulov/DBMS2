@@ -63,8 +63,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2026">
-              <caret line="1342" column="114" selection-start-line="1342" selection-start-column="114" selection-end-line="1342" selection-end-column="114" />
+            <state relative-caret-position="655">
+              <caret line="1279" column="32" selection-start-line="1279" selection-start-column="32" selection-end-line="1279" selection-end-column="32" />
+              <folding>
+                <element signature="e#46523#46524#0" expanded="true" />
+                <element signature="e#46620#46621#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,9 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>totalCost</find>
-      <find>checkOut</find>
-      <find>PieChart</find>
       <find>years</find>
       <find>books</find>
       <find>Fill</find>
@@ -110,6 +111,9 @@
       <find>Search</find>
       <find>imageview</find>
       <find>update</find>
+      <find>listView</find>
+      <find>FillImageList</find>
+      <find>Filter</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -127,10 +131,9 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-166" />
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="25" />
-    <option name="width" value="967" />
+    <option name="width" value="1280" />
     <option name="height" value="723" />
   </component>
   <component name="ProjectReloadState">
@@ -141,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -165,6 +167,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,18 +308,19 @@
       <workItem from="1619933409919" duration="11124000" />
       <workItem from="1619971227599" duration="2128000" />
       <workItem from="1619973620905" duration="2710000" />
-      <workItem from="1619977866370" duration="311000" />
+      <workItem from="1619977866370" duration="774000" />
+      <workItem from="1619980088132" duration="1580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48655000" />
+    <option name="totallyTimeSpent" value="50698000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1280" height="723" extended-state="6" />
+    <frame x="0" y="25" width="1280" height="723" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2956381" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.30048466" />
       <window_info id="Structure" order="1" weight="0.24959612" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -325,7 +329,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2784" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2784" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,8 +377,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2026">
-          <caret line="1342" column="114" selection-start-line="1342" selection-start-column="114" selection-end-line="1342" selection-end-column="114" />
+        <state relative-caret-position="655">
+          <caret line="1279" column="32" selection-start-line="1279" selection-start-column="32" selection-end-line="1279" selection-end-column="32" />
+          <folding>
+            <element signature="e#46523#46524#0" expanded="true" />
+            <element signature="e#46620#46621#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
