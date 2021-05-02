@@ -657,6 +657,7 @@ public class Main extends Application {
                 if(rst.getObject(6)!=null){
                     imag.add(((Blob)rst.getObject(6)).getBinaryStream());
 
+                }else{imag.add(null);
                 }
             }
             // Another query to generate new order numbers
@@ -713,10 +714,10 @@ public class Main extends Application {
         // Make array expandable
         imageArray = new Image[links.size()];
         // Fill
-        for(int i = 0; i < 20; i++) {
-            imageArray[i] = new Image(imag.get(i));
+        for(int i = 0; i < imag.size(); i++) {
+            if(imag.get(i)!=null)
+                imageArray[i] = new Image(imag.get(i));
         }
-
     }
     // Final checkout
     private void FinishCheckOutFunction() throws SQLException {
@@ -1261,19 +1262,20 @@ public class Main extends Application {
 
                 while (rst_sort.next()) {
                     bookNamesList = FXCollections.observableArrayList(bookNames);
-                    if(rst_sort.getObject(1)!=null && rst_sort.getObject(2)!=null && rst_sort.getObject(3)!=null && rst_sort.getObject(4)!=null && rst_sort.getObject(5)!=null) {
+                    if( rst_sort.getObject(1)!=null && rst_sort.getObject(2)!=null && rst_sort.getObject(3)!=null && rst_sort.getObject(4)!=null && rst_sort.getObject(5)!=null) {
                         bookNames.add(rst_sort.getObject(1).toString());
                         // System.out.println(bookNames.get(i++));
                         bookPrices.add(Double.parseDouble(rst_sort.getObject(2).toString()));
                         links.add(rst_sort.getObject(3).toString());
                         bookAuthor.add(rst_sort.getObject(4).toString());
                         sqlISBN.add(rst_sort.getObject(5).toString());
+
                     }
-//                    years.add(rst.getObject(7).toString());
-                    if (rst_sort.getObject(6) != null) {
+                    if(rst_sort.getObject(6) != null){
                         imag.add(((Blob) rst_sort.getObject(6)).getBinaryStream());
-                        //System.out.println(imag.get(0));
+                    }else{imag.add(null);
                     }
+//
 
 
                 }
@@ -1313,13 +1315,15 @@ public class Main extends Application {
                         links.add(rst_sort.getObject(3).toString());
                         bookAuthor.add(rst_sort.getObject(4).toString());
                         sqlISBN.add(rst_sort.getObject(5).toString());
-                    }
-                    if (rst_sort.getObject(6) != null) {
                         imag.add(((Blob) rst_sort.getObject(6)).getBinaryStream());
-                        //System.out.println(imag.get(0));
+                    }if(rst_sort.getObject(6) != null){
+                        imag.add(((Blob) rst_sort.getObject(6)).getBinaryStream());
+                    }else{imag.add(null);
                     }
 
-                }listView.setItems(bookNamesList);
+                }
+                FillImageList();
+                listView.setItems(bookNamesList);
 
             }catch (Exception e){
                 System.out.println(e);

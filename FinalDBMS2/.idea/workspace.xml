@@ -63,11 +63,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="1279" column="32" selection-start-line="1279" selection-start-column="32" selection-end-line="1279" selection-end-column="32" />
+            <state relative-caret-position="617">
+              <caret line="1098" column="40" lean-forward="true" selection-start-line="1098" selection-start-column="40" selection-end-line="1098" selection-end-column="40" />
               <folding>
-                <element signature="e#46523#46524#0" expanded="true" />
-                <element signature="e#46620#46621#0" expanded="true" />
+                <element signature="e#46609#46610#0" expanded="true" />
+                <element signature="e#46706#46707#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,11 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>years</find>
-      <find>books</find>
-      <find>Fill</find>
-      <find>More</find>
-      <find>aboutMenuItems1</find>
       <find>url</find>
       <find>aboutMenuItems3</find>
       <find>curForm</find>
@@ -112,8 +107,13 @@
       <find>imageview</find>
       <find>update</find>
       <find>listView</find>
-      <find>FillImageList</find>
       <find>Filter</find>
+      <find>Fil</find>
+      <find>Fill</find>
+      <find>image</find>
+      <find>imagearray</find>
+      <find>FillImageList</find>
+      <find>FilterByName</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -131,7 +131,7 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="25" />
     <option name="width" value="1280" />
     <option name="height" value="723" />
@@ -309,12 +309,12 @@
       <workItem from="1619971227599" duration="2128000" />
       <workItem from="1619973620905" duration="2710000" />
       <workItem from="1619977866370" duration="774000" />
-      <workItem from="1619980088132" duration="1580000" />
+      <workItem from="1619980088132" duration="2876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50698000" />
+    <option name="totallyTimeSpent" value="51994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="723" extended-state="0" />
@@ -329,7 +329,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2784" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,7 +339,7 @@
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="12" weight="0.3296" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.328" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
@@ -377,11 +377,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="1279" column="32" selection-start-line="1279" selection-start-column="32" selection-end-line="1279" selection-end-column="32" />
+        <state relative-caret-position="617">
+          <caret line="1098" column="40" lean-forward="true" selection-start-line="1098" selection-start-column="40" selection-end-line="1098" selection-end-column="40" />
           <folding>
-            <element signature="e#46523#46524#0" expanded="true" />
-            <element signature="e#46620#46621#0" expanded="true" />
+            <element signature="e#46609#46610#0" expanded="true" />
+            <element signature="e#46706#46707#0" expanded="true" />
           </folding>
         </state>
       </provider>
